@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -10,6 +10,8 @@ import { HomeComponent } from './components/home/home.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BuyerPageComponent } from './components/buyer-page/buyer-page.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ContactusComponent } from './components/contactus/contactus.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 
 
 @NgModule({
@@ -21,12 +23,15 @@ import { HeaderComponent } from './components/header/header.component';
     HomeComponent,
     SidebarComponent,
     BuyerPageComponent,
-    HeaderComponent
+    HeaderComponent,
+    ContactusComponent,
+    AboutUsComponent
    
     
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

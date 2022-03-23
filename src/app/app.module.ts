@@ -12,6 +12,8 @@ import { BuyerPageComponent } from './components/buyer-page/buyer-page.component
 import { HeaderComponent } from './components/header/header.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { SellersPageComponent } from './components/sellers-page/sellers-page.component';
+import { AddListingsComponent } from './components/add-listings/add-listings.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
     BuyerPageComponent,
     HeaderComponent,
     ContactusComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    SellersPageComponent,
+    AddListingsComponent
    
     
   ],

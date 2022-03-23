@@ -1,9 +1,8 @@
-<form #listingForm (ngSubmit)="onFormSubmit(listingForm)">
-    <div class="form-group">
-      <label for="Property">Property</label>
-      <input type="text" class="form-control" id="Property"  placeholder="Enter Property name">
-    
-    </div>
+<form #listingForm="ngForm" (ngSubmit)="onFormSubmit(listingForm)">
+  <div class="form-group">
+    <label for="seller">Seller Name</label>
+    <input type="text" class="form-control" id="Seller"  placeholder="Enter Seller name">
+  </div>
     <div class="form-group">
       <label for="description">Description</label>
       <textarea class="form-control" id="description" ></textarea>
@@ -12,10 +11,7 @@
       <label for="buyout">Price</label>
       <input type="number" class="form-control" id="buyout"  placeholder="Enter Price">
     </div>
-    <div class="form-group">
-      <label for="seller">Seller Name</label>
-      <input type="text" class="form-control" id="Seller"  placeholder="Enter Seller name">
-    </div>
+  
 
     <div class="form-group">
       <label for="Location">Location</label>

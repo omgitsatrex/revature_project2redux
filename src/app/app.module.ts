@@ -17,6 +17,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { SellersPageComponent } from './components/sellers-page/sellers-page.component';
 import { AddListingsComponent } from './components/add-listings/add-listings.component';
 import { SeeAllListingsComponent } from './components/see-all-listings/see-all-listings.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { SeeAllListingsComponent } from './components/see-all-listings/see-all-l
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

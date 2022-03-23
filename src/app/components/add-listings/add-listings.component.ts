@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+
 
 @Component({
   selector: 'app-add-listings',
@@ -11,5 +13,8 @@ export class AddListingsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+onFormSubmit(data: any){
+  console.log(data)
+}
 
 }

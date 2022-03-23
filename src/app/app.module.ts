@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import {HttpClientModule} from '@angular/common/http';
+
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -14,6 +16,7 @@ import { ContactusComponent } from './components/contactus/contactus.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { SellersPageComponent } from './components/sellers-page/sellers-page.component';
 import { AddListingsComponent } from './components/add-listings/add-listings.component';
+import { SeeAllListingsComponent } from './components/see-all-listings/see-all-listings.component';
 
 
 @NgModule({
@@ -29,13 +32,15 @@ import { AddListingsComponent } from './components/add-listings/add-listings.com
     ContactusComponent,
     AboutUsComponent,
     SellersPageComponent,
-    AddListingsComponent
+    AddListingsComponent,
+    SeeAllListingsComponent
    
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

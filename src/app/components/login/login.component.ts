@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 img = "assets/logo/prop.jpeg";
-  constructor() { }
+
+
+   
+  constructor( ) { }
 
   ngOnInit(): void {
   }
+  onSubmit() {
+   
 
+    
+
+}
 }

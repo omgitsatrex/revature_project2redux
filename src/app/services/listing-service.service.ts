@@ -4,11 +4,11 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ListingServiceService {
+export class ListingService {
 
   constructor(private http: HttpClient) { }
   getListings(): Observable<any[]>{
-    return this.http.get<any[]>('')
+    return this.http.get<any[]>('http://localhost:9000/listings')
   }
   
   getListingById(id: any): Observable<any[]>{

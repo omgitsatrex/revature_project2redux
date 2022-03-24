@@ -53,12 +53,52 @@
     </li> -->
     <li class="list-group-item" *ngFor="let listing of listings">
         <div class="row">
-            <div class="col-lg-2">
-                <img src="{{listing.imgThumbnail}}" alt="house" style="width: 100px; height: 100px" />
+            <div class="col-lg-1">
+                <img src="{{listing.url}}" alt="house" style="width: 100px; height: 100px" />
             </div>
-            <div class="col-lg-10">
-                {{listing.description}}
+            <div class="col-lg-1">
+                Property ID: <br> Location: <br> Price: <br> Seller ID:
             </div>
+            <div class="col-lg-1">
+                {{listing.id}} <br>{{listing.location}} <br>{{listing.price  | currency}} <br>{{listing.sellerID}}
+            </div>
+            <div class="col-lg-1">
+                <button class = "btn btn-secondary" (click)="editButtonHandler(listing.id)" >Edit</button>
+                <button class = "btn btn-secondary" (click)="deleteButtonHandler(listing.id)" >Delete</button>
+            </div>
+            <div class="col-lg-3" *ngIf="showDelete[listing.id]">
+                Are you sure you wish to delete this?<button class = "btn btn-secondary" style="margin-left: 10px" (click)="deleteRowHandler(listing.id)" >Yes, delete</button>
+            </div>
+            <!-- <div class="col-lg-5">
+                <button ()="onClickHandler()" >Click Me</button>
+            </div> -->
+            
         </div>
+        <form #listingForm="ngForm" (ngSubmit)="onFormSubmit(listingForm)" *ngIf="showEdit[listing.id]">
+            <div class="form-group">
+                <label for="seller">Seller Name</label>
+                <input type="text" class="form-control" id="Seller" placeholder="Enter Seller name">
+            </div>
+            <!-- <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" id="description"></textarea>
+            </div> -->
+            <div class="form-group">
+                <label for="buyout">Price</label>
+                <input type="number" class="form-control" id="buyout" placeholder="Enter Price">
+            </div>
+
+
+            <div class="form-group">
+                <label for="Location">Location</label>
+                <input type="text" class="form-control" id="Location" placeholder="Enter Location">
+            </div>
+
+            <div class="form-group">
+                <label for="picurl">Picture Url</label>
+                <input type="text" class="form-control" id="picurl" placeholder="Enter Picture Url">
+            </div>
+
+        </form>
     </li>
 </ul>

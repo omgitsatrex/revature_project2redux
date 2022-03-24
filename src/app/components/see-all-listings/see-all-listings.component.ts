@@ -59,7 +59,15 @@ export class SeeAllListingsComponent implements OnInit {
     }
   }
 
-  deleteRowHandler(data: any){
+  deleteRowHandler(id: any){
+    this.listingService.deleteListingById(id)
+    .subscribe()
+    // (data => {
+    //   this.listings = data;
+      
+    //   // this.listings.push(show);
+    //   // console.log(this.listings)
+    // })
     
   }
 

@@ -26,31 +26,6 @@
 <hr>
 
 <ul class="list-group">
-    <!-- <li class="list-group-item"><span><img src="https://www.nps.gov/apco/learn/historyculture/images/Peers-House.jpg"
-                alt="house" style="width: 100px; height: 100px" /> Description</span></li>
-    <li class="list-group-item">
-        <div class="row">
-            <div class="col-lg-2">
-                <img src="https://www.nps.gov/apco/learn/historyculture/images/Peers-House.jpg" alt="house"
-                    style="width: 100px; height: 100px" />
-            </div>
-            <div class="col-lg-10">
-                Description
-            </div>
-        </div>
-    </li>
-    <li class="list-group-item">A fourth item</li>
-    <li class="list-group-item">And a fifth one</li>
-    <li class="list-group-item">
-        <div class="row">
-            <div class="col-lg-2">
-                <img src="{{listings[0].imgThumbnail}}" alt="house" style="width: 100px; height: 100px" />
-            </div>
-            <div class="col-lg-10">
-                {{listings[0].description}}
-            </div>
-        </div>
-    </li> -->
     <li class="list-group-item" *ngFor="let listing of listings">
         <div class="row">
             <div class="col-lg-1">
@@ -66,12 +41,10 @@
                 <button class = "btn btn-secondary" (click)="editButtonHandler(listing.id)" >Edit</button>
                 <button class = "btn btn-secondary" (click)="deleteButtonHandler(listing.id)" >Delete</button>
             </div>
-            <div class="col-lg-3" *ngIf="showDelete[listing.id]">
-                Are you sure you wish to delete this?<button class = "btn btn-secondary" style="margin-left: 10px" (click)="deleteRowHandler(listing.id)" >Yes, delete</button>
+            <div class="col-lg-3 nav-link" *ngIf="showDelete[listing.id]">
+                Are you sure you wish to delete this?<button class = "btn btn-secondary" 
+                style="margin-left: 10px"  (click)="deleteRowHandler(listing.id)"  routerLink="/buyer">Yes, delete</button>
             </div>
-            <!-- <div class="col-lg-5">
-                <button ()="onClickHandler()" >Click Me</button>
-            </div> -->
             
         </div>
         <form #listingForm="ngForm" (ngSubmit)="onFormSubmit(listingForm)" *ngIf="showEdit[listing.id]">
